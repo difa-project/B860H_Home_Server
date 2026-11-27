@@ -1,3 +1,59 @@
+## Latest Development — 27 November 2026
+
+### 1. Wi-Fi Repeater
+
+B860H was configured as a Wi-Fi repeater.
+
+- Uses a TP-Link TL-WN727N USB Wi-Fi adapter to receive the upstream Wi-Fi connection.
+- Uses the internal Wi-Fi interface to broadcast the connection.
+- Allows other devices to connect through the B860H.
+
+### 2. Samba File Server
+
+An external 1 TB HDD was connected to the B860H and configured as network storage.
+
+- Samba was configured for file sharing.
+- HDD mount point: `/mnt/sda1`
+- Samba share: `stb-hdd`
+- Local access path: `\\192.168.2.1\stb-hdd`
+
+The Samba share was successfully accessed through Windows File Explorer on the home network.
+
+### 3. Remote Access with Tailscale
+
+Tailscale was installed and configured to enable private remote access.
+
+Testing confirmed that:
+
+- Tailscale connectivity between devices was successful.
+- Samba could be accessed from the home network.
+- Samba could also be accessed remotely through a mobile hotspot.
+- Windows File Explorer successfully opened the remote Samba share.
+
+No public port forwarding was required.
+
+### Current Project Status
+
+The B860H is currently used as:
+
+1. Wi-Fi repeater.
+2. Samba file server with external HDD storage.
+3. Private remote storage server through Tailscale.
+
+### Next Development Plan
+
+The next planned project is system and network monitoring.
+
+Potential monitoring features include:
+
+- CPU usage.
+- RAM usage.
+- System temperature.
+- Network connectivity.
+- HDD storage capacity and health.
+
+Monitoring is still a planned development and has not yet been implemented.
+
 # Project History — ZTE B860H
 
 **Perangkat:** ZTE B860H  
