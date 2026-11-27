@@ -2,6 +2,22 @@
 
 Semua perubahan penting proyek dicatat di sini. Catatan ini merupakan ringkasan berdasarkan histori percakapan; tanggal yang lebih spesifik hanya digunakan jika tersedia.
 
+## [2026-11-27] - Remote Access Successfully Implemented
+
+### Added
+- Configured Tailscale on the B860H for private remote access.
+- Added remote access documentation in `docs/REMOTE_ACCESS.md`.
+
+### Tested
+- Verified Tailscale connectivity between devices.
+- Successfully accessed Samba from the local home network.
+- Successfully accessed Samba remotely using a mobile hotspot.
+- Verified remote file access through Windows File Explorer.
+
+### Result
+- B860H can now provide remote access to its Samba file server.
+- No public port forwarding is required.
+
 ## 2026-11-15
 - Menyusun dokumentasi proyek B860H.
 - Mendokumentasikan penggunaan HDD 1 TB sebagai penyimpanan jaringan.
