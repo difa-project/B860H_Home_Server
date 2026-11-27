@@ -1,0 +1,59 @@
+# Remote Access Documentation
+
+## 1. Overview
+
+The ZTE B860H Home Server supports remote access to its Samba file server using Tailscale.
+
+This setup allows personal access to the external HDD from outside the home network without configuring public port forwarding.
+
+## 2. Network Architecture
+
+- **Device:** ZTE B860H
+- **Operating System:** OpenWrt
+- **Remote Access:** Tailscale
+- **File Sharing:** Samba
+- **Storage:** External HDD 1 TB
+- **Samba Share:** `stb-hdd`
+
+## 3. Local Network Access
+
+From a device connected to the home network, access the Samba share using Windows File Explorer:
+
+`\\192.168.2.1\stb-hdd`
+
+## 4. Remote Access Using Tailscale
+
+Tailscale provides a private network connection between the STB and authorized personal devices.
+
+To access the Samba server remotely:
+
+1. Ensure Tailscale is running on the B860H.
+2. Ensure Tailscale is installed and connected on the client device.
+3. Open Windows File Explorer.
+4. Enter the STB's Tailscale IP address:
+
+`\\[TAILSCALE-IP-STB]\stb-hdd`
+
+Replace `[TAILSCALE-IP-STB]` with the actual Tailscale IP address assigned to the B860H.
+
+## 5. Connectivity Testing
+
+The following tests were successfully completed:
+
+- Samba access from the home network.
+- Tailscale connectivity between devices.
+- Samba access using a Windows laptop connected through a mobile phone hotspot.
+
+**Result:** Remote Samba access was successful.
+
+## 6. Security Notes
+
+- Tailscale is used for private personal access.
+- No public port forwarding is required for this setup.
+- Keep Tailscale authentication and device access restricted to authorized devices.
+
+## 7. Project Status
+
+**Status: Successfully Implemented**
+
+The B860H can function as a local Samba file server and provide remote access through Tailscale.
